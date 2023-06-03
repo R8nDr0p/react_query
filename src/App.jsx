@@ -22,10 +22,12 @@ function App() {
     return <h1>{error}</h1>;
   }
 
+  const user = data?.results?.[0];
+
   return (
     <>
       <div>
-        <img src={data.results[0].picture.large} alt="user id" />
+        <img src={user.picture.large} alt="user id" />
         <h1>
           {data.results[0].name.first} {data.results[0].name.last}
         </h1>
